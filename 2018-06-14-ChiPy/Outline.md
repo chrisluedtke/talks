@@ -15,23 +15,19 @@
     2. Reading Data to Reporting - While Excel and Power BI are sufficient and often powerful tools for automated data flow from Salesforce, querying Salesforce through Python provides several benefits:
         *	Visual: left: Salesforce logo and download, move file; right: python
         * Complete and control over publishing: Service Tracker PDFs
-        * Complex shaping and analysis
-            * our service environment makes it difficult to isolate the efficacy of our programming, since we don't randomly select the schools or students we work with, and we provide whole-school, whole-class support
-            * Analysis questions
-                * Can we and do we quantify/measure effective tutoring?
-                * What attributes of tutors or schools most relate to tutor effectiveness and positive tutoring experiences?
-            * Wrote scripts to shape Salesforce objects as pandas DataFrames in Jupyter Notebook
-            *	Make connections between disparate datasets
-                * timeseries of programming provided
-                * student performance (assessments/grades/attendance)
-                * survey data from tutors
-                * survey data from school teachers and admin
-                * assessments of school partnership conditions
-                * observations of tutoring sessions
-            * Next steps: end of year data, longitudinal data, pending data sharing agreement with CPS
+        * data analysis
+            * Tools
+            * Investigative themes
+                * Which attributes of tutors and schools relate to our many success metrics?
+                * How can we better model program implementation to set realistic expectations and inform actionable intervention
+            * I wrote a system of analysis notebooks to gather all our data sources, investigate themes, and visualize uncommon comparisons across datasets. I didn't satisfy my overarching investigative themes - they were very ambitious - but I gained understanding of what data infrastructure is necessary to get there. I learned EDA is a cyclical process where the questions, technical approach, and response are constantly evolving
+            * Examples: observation scores and commute challenges
+            * With this infrastructure and the personal intuition I've built for the data, I can quickly incorporate end-of-year data this summer
+            * With the context of an entire year of programming, I can investigate which data attributes also exist in prior years. A longitudinal perspective would greatly benefit the statistical validity of findings.
+            * Data quality is a big issue, since our data gathering involves varying degrees of manual input. We are security a direct data sharing agreement with CPS
 *	Webapp
     * 2/3 through my mentorship I switched focus from our data systems and analytics. I felt some #FoMO from webdev, and this was an excellent opportunity to tap my mentor's expertise.
-    *	In my first year as an analyst at City Year, I built an R-based algorithm to place tutors onto school teams with consideration for commute times, demographic and skill diversity, and language speaking ability.
+    * In the last year and a half I wrote an R-based algorithm to place tutors onto school teams with consideration for commute times, demographic and skill diversity, and language speaking ability.
     *	This tool had dramatic improvements on our AmeriCorps Member experience, as corps members commuted XXX faster.
     *	However, the tool required user to install R Studio and all prerequisites, was constrained by user’s local resources, not something our nonprofit city locations have capacity for.
     *	Django (html, css, sqlite, whitenoise, gunicorn), Docker, Azure
